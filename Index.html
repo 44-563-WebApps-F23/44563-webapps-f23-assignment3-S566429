@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+</head>
+<body>
+<h1>Bhavyasree Kalava</h1>
+<h2>My Favorite Vacation is Korea</h2>
+    <p>I like korea because it is very famous for BTS. And also famous for most of the famous K dramas.</p>
+    <p>I particularly enjoy <strong>BTS concerts</strong> and <strong>Beaches</strong> that used to show in K-Dramas.</p>
+    <hr>
+<h2>list of activities to do at my favourite spot</h2>
+<ol>
+    <li>Attend a live BTS concert</li>
+    <li>visit all K Drama places</li>
+    <li>Visit korean stores</li>
+</ol>
+<h2>Favorite food at Korea</h2>
+<ul>
+    <li>A delicious kimchi fried rice dish.</li>
+    <li>Ddukbokki with savory flavors.</li>
+    <li> Tteokbokki served with hot noodles.</li>
+</ul>
+<br>
+    <a href="mystats.html">About me</a>
+
+    <hr>
+<h2>4 kinds of Sports that i would Recommended</h2>
+<table>
+    <tr>
+        <th>Name of the sports</th>
+        <th>Reason</th>
+        <th>Hours per Week</th>
+    </tr>
+    <tr>
+        <td>Cricket</td>
+        <td>Virat kohli will be there in cricket</td>
+        <td>2 hours</td>
+    </tr>
+    <tr>
+        <td>Football</td>
+        <td>One of the nicsse game to play</td>
+        <td>1 hours</td>
+    </tr>
+    <tr>
+        <td>Basketball</td>
+        <td>It helps us in being active in a day</td>
+        <td>2 hours</td>
+    </tr>
+    <tr>
+        <td>PUBG </td>
+        <td>Nice timepass to play with friends</td>
+        <td>5 hours</td>
+    </tr>
+</table>
+<hr>
+
+<h1>Code Fencing</h1>
+
+<blockquote>the_category with Excludes</blockquote>
+
+<a href="https://stackoverflow.com/questions/5021964/exclude-parent-categories-from-the-category-within-the-loop">click link to source</a>
+
+<pre>
+    function exclude_post_categories($excl='', $spacer=' ') {
+        $categories = get_the_category(get_the_ID());
+        if (!empty($categories)) {
+          $exclude = $excl;
+          $exclude = explode(",", $exclude);
+          $thecount = count(get_the_category()) - count($exclude);
+          foreach ($categories as $cat) {
+            $html = '';
+            if (!in_array($cat->cat_ID, $exclude)) {
+              $html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
+              $html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a>';
+              if ($thecount > 0) {
+                $html .= $spacer;
+              }
+              $thecount--;
+              echo $html;
+            }
+          }
+        }
+      }
+</pre>
+</body>
+</html>
